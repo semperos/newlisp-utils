@@ -1,3 +1,11 @@
+;; ## Multi-Grep ##
+;;
+;; First arg should be a regex, or multiple regexes separated by `||`,
+;; in which case only lines matching both regexes will be printed.
+;;
+;; The second arg can be either a file or a glob.
+;;
+
 ;; Regularize between shell script and executable
 (if (= (main-args 0) "/usr/bin/newlisp")
     (set 'prog-args (rest (rest (main-args))))
